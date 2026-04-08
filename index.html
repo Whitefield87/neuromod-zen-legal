@@ -61,3 +61,91 @@
             font-size: 1.2em;
             display: flex;
             align-items: center;
+        }
+
+        h3::before {
+            content: "•";
+            margin-right: 10px;
+            color: var(--text-dim);
+        }
+
+        p, li { 
+            font-size: 1.05em;
+            color: var(--text-main); 
+            font-weight: 300;
+        }
+
+        ul { padding-left: 20px; list-style-type: none; }
+        li { margin-bottom: 15px; position: relative; }
+        li::before { content: "›"; position: absolute; left: -15px; color: var(--accent-zen); }
+
+        .highlight { 
+            color: var(--accent-zen);
+            font-weight: 500;
+        }
+
+        .delete-section {
+            background-color: rgba(56, 189, 248, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 50px;
+            border: 1px dashed rgba(56, 189, 248, 0.3);
+        }
+
+        .footer { 
+            margin-top: 60px; 
+            font-size: 0.8em; 
+            color: var(--text-dim); 
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+        }
+
+        strong { font-weight: 500; color: #fff; }
+
+        /* Scrollbar elegante */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: var(--card-bg); border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Neuromod Zen</h1>
+        <div class="subtitle">Informativa sulla Privacy</div>
+        
+        <p>In <strong>Neuromod Zen</strong>, crediamo che la tua privacy sia il primo passo verso la serenità. Questa informativa spiega come trattiamo i tuoi dati con trasparenza e rispetto.</p>
+
+        <h3>1. Titolare del Trattamento</h3>
+        <p>Il trattamento dei dati è gestito direttamente dallo sviluppatore. Puoi contattarci per ogni necessità a: <br><span class="highlight">c.sansonedicampobianco+neuromod@gmail.com</span></p>
+
+        <h3>2. Dati Raccolti</h3>
+        <ul>
+            <li><strong>Identità:</strong> Email e nome tramite autenticazione Google/Firebase.</li>
+            <li><strong>Abbonamenti:</strong> Stato del tuo Pass Zen gestito tramite Google Play.</li>
+            <li><strong>Esperienza:</strong> Preferenze sonore salvate per i tuoi momenti di relax.</li>
+            <li><strong>Dati Tecnici:</strong> ID dispositivo per garantire la sicurezza del servizio.</li>
+        </ul>
+
+        <h3>3. Finalità del Trattamento</h3>
+        <p>I tuoi dati sono utilizzati esclusivamente per sincronizzare il tuo percorso di sollievo acustico tra i tuoi dispositivi e gestire i servizi Premium del Pass Zen.</p>
+
+        <h3>4. Servizi di Terze Parti</h3>
+        <p>Utilizziamo l'infrastruttura sicura di Google (Firebase e Google Play Services) per garantire i più alti standard di protezione e stabilità.</p>
+
+        <div id="delete-account" class="delete-section">
+            <h3 style="margin-top: 0;">Cancellazione Account e Dati</h3>
+            <p>La tua libertà è la nostra priorità. Puoi richiedere la rimozione totale dei tuoi dati in ogni momento:</p>
+            <ul>
+                <li>Dalle <strong>impostazioni del profilo</strong> direttamente nell'App.</li>
+                <li>Inviando una richiesta a: <span class="highlight">c.sansonedicampobianco+del_neuromod@gmail.com</span>. Procederemo entro 48 ore.</li>
+            </ul>
+            <p><small>Nota: Ricorda di annullare eventuali abbonamenti attivi sul Google Play Store per evitare rinnovi automatici.</small></p>
+        </div>
+
+        <div class="footer">
+            Neuromod Zen &bull; 2026 &bull; Pace ai tuoi sensi.
+        </div>
+    </div>
+</body>
+</html>
