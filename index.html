@@ -3,81 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Neuromod Zen</title>
+    <title>Privacy & Zen - Neuromod</title>
     <style>
+        :root {
+            --bg-color: #0f172a;       /* Blu notte profondo */
+            --card-bg: #1e293b;       /* Blu ardesia per il contenitore */
+            --accent-zen: #38bdf8;    /* Azzurro aria per i dettagli */
+            --text-main: #f1f5f9;     /* Bianco sporco riposante */
+            --text-dim: #94a3b8;      /* Grigio per i testi secondari */
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
         }
+
         .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            max-width: 700px;
+            width: 90%;
+            margin: 60px 20px;
+            padding: 50px;
+            background: var(--card-bg);
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.05);
         }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h3 { color: #2c3e50; margin-top: 25px; }
-        p, li { color: #555; }
-        .footer { margin-top: 50px; font-size: 0.9em; color: #999; text-align: center; }
-        .highlight { background-color: #fff3cd; padding: 2px 5px; border-radius: 4px; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Informativa sulla Privacy</h1>
-        <p><strong>Ultimo aggiornamento:</strong> 8 Aprile 2026</p>
 
-        <p>La presente Informativa sulla privacy descrive le modalità con cui <strong>Neuromod Zen</strong> ("noi", "nostro" o "l'App") raccoglie, utilizza e protegge le informazioni dell'utente.</p>
+        h1 { 
+            font-weight: 200; 
+            font-size: 2.5em;
+            color: var(--accent-zen); 
+            letter-spacing: -1px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
 
-        <h3>1. Titolare del Trattamento dei Dati</h3>
-        <p>Il trattamento dei dati è gestito direttamente dallo sviluppatore dell'App. Per qualsiasi domanda, puoi contattarci all'indirizzo email: <strong>c.sansonedicampobianco+neuromod@gmail.com</strong></p>
+        .subtitle {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
 
-        <h3>2. Dati Raccolti</h3>
-        <p>L'App raccoglie alcune informazioni necessarie per il suo corretto funzionamento:</p>
-        <ul>
-            <li><strong>Dati Identificativi:</strong> Indirizzo email e nome dell'utente (tramite autenticazione Google/Firebase).</li>
-            <li><strong>Dati sugli Acquisti:</strong> Informazioni sulle transazioni e sugli abbonamenti attivi (gestiti tramite Google Play Store).</li>
-            <li><strong>Dati sull'Utilizzo:</strong> Informazioni tecniche come l'ID del dispositivo per garantire la corretta erogazione dei servizi premium.</li>
-        </ul>
-
-        <h3>3. Finalità del Trattamento</h3>
-        <p>I dati vengono utilizzati esclusivamente per:</p>
-        <ul>
-            <li>Consentire l'accesso all'account e la sincronizzazione delle preferenze sonore.</li>
-            <li>Gestire gli abbonamenti "Pass Zen" e sbloccare le funzionalità Premium.</li>
-            <li>Migliorare l'esperienza d'uso e la stabilità tecnica dell'App.</li>
-        </ul>
-
-        <h3>4. Servizi di Terze Parti</h3>
-        <p>L'App utilizza servizi di terze parti:</p>
-        <ul>
-            <li>Google Play Services</li>
-            <li>Firebase Authentication</li>
-            <li>Google Analytics per Firebase</li>
-        </ul>
-
-        <h3>5. Diritti dell'Utente</h3>
-        <p>In conformità con il GDPR (UE 2016/679), l'utente ha il diritto di accedere, rettificare o richiedere la cancellazione dei propri dati in qualsiasi momento contattando il titolare.</p>
-
-        <h3>6. Sicurezza dei Dati</h3>
-        <p>I dati sono crittografati durante il transito e archiviati in modo sicuro sui server Google Cloud/Firebase.</p>
-
-        <h3 id="delete-account">7. Eliminazione dell'Account e dei Dati</h3>
-        <p>Gli utenti hanno il diritto di richiedere l'eliminazione del proprio account e dei dati associati in qualsiasi momento:</p>
-        <ul>
-            <li><strong>Dall'App:</strong> È possibile utilizzare la funzione di eliminazione account presente nelle impostazioni del profilo.</li>
-            <li><strong>Via Email:</strong> Inviando una richiesta esplicita a <strong class="highlight">c.sansonedicampobianco+del_neuromod@gmail.com</strong>. I dati verranno rimossi dai nostri sistemi entro 48 ore dalla richiesta.</li>
-        </ul>
-        <p><strong>Nota importante sugli abbonamenti:</strong> L'eliminazione dell'account non annulla automaticamente eventuali abbonamenti attivi sottoscritti tramite Google Play. Per evitare addebiti futuri, l'utente deve annullare il rinnovo direttamente nelle impostazioni del proprio account Google Play (Sezione "Pagamenti e abbonamenti").</p>
-
-        <div class="footer">
-            Neuromod Zen &copy; 2026
-        </div>
-    </div>
-</body>
-</html>
+        h3 { 
+            color: var(--accent-zen); 
+            margin-top: 40px; 
+            font-weight: 400;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
