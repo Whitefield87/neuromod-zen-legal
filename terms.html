@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termini di Servizio - Neuromod Zen</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;       /* Blu notte profondo */
+            --card-bg: #1e293b;       /* Blu ardesia */
+            --accent-zen: #fbbf24;    /* Ambra/Oro per i Termini */
+            --text-main: #f1f5f9;     /* Bianco sporco */
+            --text-dim: #94a3b8;      /* Grigio */
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 90%;
+            margin: 60px 20px;
+            padding: 50px;
+            background: var(--card-bg);
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        h1 { 
+            font-weight: 200; 
+            font-size: 2.5em;
+            color: var(--accent-zen); 
+            letter-spacing: -1px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        h3 { 
+            color: var(--accent-zen); 
+            margin-top: 40px; 
+            font-weight: 400;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+
+        h3::before {
+            content: "•";
+            margin-right: 10px;
+            color: var(--text-dim);
+        }
+
+        p, li { 
+            font-size: 1.05em;
+            color: var(--text-main); 
+            font-weight: 300;
+        }
+
+        ul { padding-left: 20px; list-style-type: none; }
+        li { margin-bottom: 15px; position: relative; }
+        li::before { content: "›"; position: absolute; left: -15px; color: var(--accent-zen); }
+
+        .highlight { 
+            color: var(--accent-zen);
+            font-weight: 500;
+        }
+
+        .notice-section {
+            background-color: rgba(251, 191, 36, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 50px;
+            border: 1px dashed rgba(251, 191, 36, 0.3);
+        }
+
+        .footer { 
+            margin-top: 60px; 
+            font-size: 0.8em; 
+            color: var(--text-dim); 
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+        }
+
+        strong { font-weight: 500; color: #fff; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: var(--card-bg); border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Neuromod Zen</h1>
+        <div class="subtitle">Termini e Condizioni d'Uso</div>
+        
+        <p>L'accesso a <strong>Neuromod Zen</strong> implica l'accettazione dei presenti termini. Il nostro obiettivo è offrirti un'esperienza di sollievo acustico sicura e professionale.</p>
+
+        <h3>1. Descrizione del Servizio</h3>
+        <p>Neuromod Zen fornisce strumenti sonori per il rilassamento e la gestione dell'acufene tramite tecniche di mascheramento e neuromodulazione acustica.</p>
+
+        <h3>2. Abbonamento Pass Zen (In-App Purchase)</h3>
+        <ul>
+            <li><strong>Accesso:</strong> Il Pass Zen sblocca tutte le funzionalità premium e la libreria sonora completa.</li>
+            <li><strong>Fatturazione:</strong> I pagamenti sono gestiti da Google Play Store. L'abbonamento si rinnova automaticamente.</li>
+            <li><strong>Gestione:</strong> Puoi annullare il rinnovo in qualsiasi momento dalle impostazioni del tuo account Google Play.</li>
+        </ul>
+
+        <h3>3. Politica di Rimborso</h3>
+        <p>In quanto sviluppatori, non abbiamo accesso diretto ai tuoi dati di pagamento. Eventuali richieste di rimborso devono essere inoltrate a <span class="highlight">Google Play Store</span> secondo le loro tempistiche e modalità.</p>
+
+        <h3>4. Disclaimer Medico</h3>
+        <p>Neuromod Zen è un supporto al benessere. <strong>Non è un dispositivo medico</strong> e non sostituisce diagnosi o trattamenti clinici. Consulta sempre un medico per cambiamenti improvvisi del tuo udito.</p>
+
+        <div class="notice-section">
+            <h3 style="margin-top: 0;">Uso Responsabile</h3>
+            <p>Per proteggere la tua salute uditiva:</p>
+            <ul>
+                <li>Non utilizzare l'app a volumi eccessivi per periodi prolungati.</li>
+                <li>L'efficacia della neuromodulazione può variare da individuo a individuo.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            Neuromod Zen &bull; 2026 &bull; Sviluppato con cura per il tuo silenzio.
+        </div>
+    </div>
+</body>
+</html>
