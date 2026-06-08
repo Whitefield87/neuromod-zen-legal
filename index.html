@@ -109,23 +109,20 @@
         ::-webkit-scrollbar-thumb { background: var(--card-bg); border-radius: 10px; }
 
         /* ==========================================================================
-           LOGICA DI SWITCH DELLA LINGUA (HTML5 + CSS3 COMPATIBILE GITHUB)
+           GESTIONE VISIBILITÀ LINGUE
            ========================================================================== */
+        .content-lang-it, .content-lang-en { display: none; }
         
-        /* 1. Di base nascondiamo l'italiano e mostriamo l'inglese come fallback universale */
-        .content-lang-it { display: none; }
-        .content-lang-en { display: block; }
-
-        /* 2. Se la lingua del browser di chi naviga è l'italiano, invertiamo la visibilità */
-        *:lang(it) .content-lang-it { display: block; }
-        *:lang(it) .content-lang-en { display: none; }
+        /* Classi di controllo attivate dallo script */
+        .show-it .content-lang-it { display: block; }
+        .show-en .content-lang-en { display: block; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Neuromod Zen</h1>
         
-        <div class="content-lang-it" lang="it">
+        <div class="content-lang-it">
             <div class="subtitle">Informativa sulla Privacy</div>
             
             <p>In <strong>Neuromod Zen</strong>, crediamo che la tua privacy sia il primo passo verso la serenità. Questa informativa spiega come trattiamo i tuoi dati con trasparenza e rispetto.</p>
@@ -172,7 +169,7 @@
         </div>
 
 
-        <div class="content-lang-en" lang="en">
+        <div class="content-lang-en">
             <div class="subtitle">Privacy Policy</div>
             
             <p>At <strong>Neuromod Zen</strong>, we believe your privacy is the first step toward serenity. This policy explains how we handle your data with transparency and respect.</p>
@@ -219,5 +216,14 @@
         </div>
 
     </div>
+
+    <script>
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('it')) {
+            document.body.classList.add('show-it');
+        } else {
+            document.body.classList.add('show-en');
+        }
+    </script>
 </body>
 </html>
