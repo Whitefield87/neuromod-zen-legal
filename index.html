@@ -109,13 +109,12 @@
         ::-webkit-scrollbar-thumb { background: var(--card-bg); border-radius: 10px; }
 
         /* ==========================================================================
-           GESTIONE VISIBILITÀ LINGUE
+           GESTIONE VISIBILITÀ LINGUE (Gestito via JS Class)
            ========================================================================== */
         .content-lang-it, .content-lang-en { display: none; }
         
-        /* Classi di controllo attivate dallo script */
-        .show-it .content-lang-it { display: block; }
-        .show-en .content-lang-en { display: block; }
+        body.show-it .content-lang-it { display: block; }
+        body.show-en .content-lang-en { display: block; }
     </style>
 </head>
 <body>
@@ -218,8 +217,8 @@
     </div>
 
     <script>
-        const userLang = navigator.language || navigator.userLanguage;
-        if (userLang.startsWith('it')) {
+        var userLang = navigator.language || navigator.userLanguage;
+        if (userLang && userLang.toLowerCase().startsWith('it')) {
             document.body.classList.add('show-it');
         } else {
             document.body.classList.add('show-en');
