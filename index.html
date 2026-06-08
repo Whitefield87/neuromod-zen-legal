@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
+<html lang="it"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy & Zen - Neuromod</title>
@@ -107,54 +106,119 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-color); }
         ::-webkit-scrollbar-thumb { background: var(--card-bg); border-radius: 10px; }
+
+        /* ==========================================================================
+           LOGICA DI SWITCH DELLA LINGUA (HTML5 + CSS3)
+           ========================================================================== */
+        
+        /* 1. Di base mostriamo l'inglese come fallback universale */
+        [lang="it"] { display: none; }
+        [lang="en"] { display: block; }
+
+        /* 2. Se la lingua del browser è l'italiano, invertiamo la visualizzazione */
+        @media (lang: it) {
+            [lang="it"] { display: block; }
+            [lang="en"] { display: none; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Neuromod Zen</h1>
-        <div class="subtitle">Informativa sulla Privacy</div>
         
-        <p>In <strong>Neuromod Zen</strong>, crediamo che la tua privacy sia il primo passo verso la serenità. Questa informativa spiega come trattiamo i tuoi dati con trasparenza e rispetto.</p>
+        <div lang="it">
+            <div class="subtitle">Informativa sulla Privacy</div>
+            
+            <p>In <strong>Neuromod Zen</strong>, crediamo che la tua privacy sia il primo passo verso la serenità. Questa informativa spiega come trattiamo i tuoi dati con trasparenza e rispetto.</p>
 
-        <h3>1. Titolare del Trattamento</h3>
-        <p>Il trattamento dei dati è gestito direttamente dallo sviluppatore. Puoi contattarci per ogni necessità a: <br><span class="highlight">neuromodzen+help@gmail.com</span></p>
+            <h3>1. Titolare del Trattamento</h3>
+            <p>Il trattamento dei dati è gestito direttamente dallo sviluppatore. Puoi contattarci per ogni necessità a: <br><span class="highlight">neuromodzen+help@gmail.com</span></p>
 
-        <h3>2. Dati Raccolti</h3>
-        <ul>
-            <li><strong>Identità:</strong> Email e nome tramite autenticazione Google/Firebase.</li>
-            <li><strong>Abbonamenti:</strong> Stato del tuo Pass Zen gestito tramite Google Play.</li>
-            <li><strong>Esperienza:</strong> Preferenze sonore e dati di calibrazione dell'acufene.</li>
-            <li><strong>Dati Tecnici:</strong> ID dispositivo per garantire la sicurezza del servizio.</li>
-        </ul>
-
-        <h3>3. Finalità del Trattamento</h3>
-        <p>I tuoi dati sono utilizzati esclusivamente per sincronizzare il tuo percorso di sollievo acustico tra i tuoi dispositivi e gestire i servizi Premium del Pass Zen.</p>
-
-        <h3>4. Conservazione dei Dati</h3>
-        <p>I dati personali sono conservati esclusivamente per il tempo necessario a erogare le funzionalità dell'applicazione:</p>
-        <ul>
-            <li><strong>Dati di Autenticazione e Profilo:</strong> Conservati per tutta la durata di attivazione dell'account. Vengono eliminati definitivamente entro 30 giorni dalla richiesta di cancellazione.</li>
-            <li><strong>Configurazioni e Calibrazione dell'Acufene:</strong> Salvati in locale, vengono rimossi contestualmente alla disinstallazione della applicazione o alla cancellazione dell'account.</li>
-            <li><strong>Dati di Sottoscrizione e Acquisti:</strong> Conservati per il periodo di validità del Pass Zen e, successivamente, per il tempo richiesto dalle normative fiscali e amministrative di Google Play.</li>
-            <li><strong>Log Tecnici di Errore:</strong> Conservati in forma anonima per un periodo non superiore a 60 giorni per garantire la stabilità dell'applicazione.</li>
-        </ul>
-
-        <h3>5. Servizi di Terze Parti</h3>
-        <p>Utilizziamo l'infrastruttura sicura di Google (Firebase e Google Play Services) per garantire i più alti standard di protezione e stabilità.</p>
-
-        <div id="delete-account" class="delete-section">
-            <h3 style="margin-top: 0;">Cancellazione Account e Dati</h3>
-            <p>La tua libertà è la nostra priorità. Puoi richiedere la rimozione totale dei tuoi dati in ogni momento:</p>
+            <h3>2. Dati Raccolti</h3>
             <ul>
-                <li>Dal <strong>menu di gestione nella sound library</strong> direttamente nell'App.</li>
-                <li>Inviando una richiesta a: <span class="highlight">neuromodzen+deleteaccount@gmail.com</span>. Presa in carico entro 48 ore ed eliminazione definitiva dai server completata entro 30 giorni.</li>
+                <li><strong>Identità:</strong> Email e nome tramite autenticazione Google/Firebase.</li>
+                <li><strong>Abbonamenti:</strong> Stato del tuo Pass Zen gestito tramite Google Play.</li>
+                <li><strong>Esperienza:</strong> Preferenze sonore e dati di calibrazione dell'acufene.</li>
+                <li><strong>Dati Tecnici:</strong> ID dispositivo per garantire la sicurezza del servizio.</li>
             </ul>
-            <p><small>Nota: Ricorda di annullare eventuali abbonamenti attivi sul Google Play Store per evitare rinnovi automatici.</small></p>
+
+            <h3>3. Finalità del Trattamento</h3>
+            <p>I tuoi dati sono utilizzati esclusivamente per sincronizzare il tuo percorso di sollievo acustico tra i tuoi dispositivi e gestire i servizi Premium del Pass Zen.</p>
+
+            <h3>4. Conservazione dei Dati</h3>
+            <p>I dati personali sono conservati esclusivamente per il tempo necessario a erogare le funzionalità dell'applicazione:</p>
+            <ul>
+                <li><strong>Dati di Autenticazione e Profilo:</strong> Conservati per tutta la durata di attivazione dell'account. Vengono eliminati definitivamente entro 30 giorni dalla richiesta di cancellazione.</li>
+                <li><strong>Configurazioni e Calibrazione dell'Acufene:</strong> Salvati in locale, vengono rimossi contestualmente alla disinstallazione dell'applicazione o alla cancellazione dell'account.</li>
+                <li><strong>Dati di Sottoscrizione e Acquisti:</strong> Conservati per il periodo di validità del Pass Zen e, successivamente, per il tempo richiesto dalle normative fiscali e amministrative di Google Play.</li>
+                <li><strong>Log Tecnici di Errore:</strong> Conservati in forma anonima per un periodo non superiore a 60 giorni per garantire la stabilità dell'applicazione.</li>
+            </ul>
+
+            <h3>5. Servizi di Terze Parti</h3>
+            <p>Utilizziamo l'infrastruttura sicura di Google (Firebase e Google Play Services) per garantire i più alti standard di protezione e stabilità.</p>
+
+            <div id="delete-account" class="delete-section">
+                <h3 style="margin-top: 0;">Cancellazione Account e Dati</h3>
+                <p>La tua libertà è la nostra priorità. Puoi richiedere la rimozione totale dei tuoi dati in ogni momento:</p>
+                <ul>
+                    <li>Dal <strong>menu di gestione nella sound library</strong> direttamente nell'App.</li>
+                    <li>Inviando una richiesta a: <span class="highlight">neuromodzen+deleteaccount@gmail.com</span>. Presa in carico entro 48 ore ed eliminazione definitiva dai server completata entro 30 giorni.</li>
+                </ul>
+                <p><small>Nota: Ricorda di annullare eventuali abbonamenti attivi sul Google Play Store per evitare rinnovi automatici.</small></p>
+            </div>
+
+            <div class="footer">
+                Neuromod Zen &bull; 2026 &bull; Pace ai tuoi sensi.
+            </div>
         </div>
 
-        <div class="footer">
-            Neuromod Zen &bull; 2026 &bull; Pace ai tuoi sensi.
+
+        <div lang="en">
+            <div class="subtitle">Privacy Policy</div>
+            
+            <p>At <strong>Neuromod Zen</strong>, we believe your privacy is the first step toward serenity. This policy explains how we handle your data with transparency and respect.</p>
+
+            <h3>1. Data Controller</h3>
+            <p>Data processing is managed directly by the developer. You can contact us for any needs at: <br><span class="highlight">neuromodzen+help@gmail.com</span></p>
+
+            <h3>2. Data Collected</h3>
+            <ul>
+                <li><strong>Identity:</strong> Email and name via Google/Firebase authentication.</li>
+                <li><strong>Subscriptions:</strong> Status of your Zen Pass managed through Google Play.</li>
+                <li><strong>Experience:</strong> Sound preferences and tinnitus calibration data.</li>
+                <li><strong>Technical Data:</strong> Device ID to ensure service security and stability.</li>
+            </ul>
+
+            <h3>3. Purpose of Processing</h3>
+            <p>Your data is used exclusively to synchronize your acoustic relief journey across your devices and to manage the Premium services of the Zen Pass.</p>
+
+            <h3>4. Data Retention</h3>
+            <p>Personal data is retained only for the time necessary to provide the application's features:</p>
+            <ul>
+                <li><strong>Authentication and Profile Data:</strong> Retained for the entire duration of the account activation. It is permanently deleted within 30 days of an account deletion request.</li>
+                <li><strong>Settings and Tinnitus Calibration:</strong> Saved locally, these are removed upon app uninstallation or account deletion.</li>
+                <li><strong>Subscription and Purchase Data:</strong> Retained for the validity period of the Zen Pass and, subsequently, for the time required by Google Play's fiscal and administrative regulations.</li>
+                <li><strong>Technical Error Logs:</strong> Kept anonymously for a period not exceeding 60 days to ensure the stability of the application.</li>
+            </ul>
+
+            <h3>5. Third-Party Services</h3>
+            <p>We use Google's secure infrastructure (Firebase and Google Play Services) to guarantee the highest standards of protection and stability.</p>
+
+            <div id="delete-account-en" class="delete-section">
+                <h3 style="margin-top: 0;">Account and Data Deletion</h3>
+                <p>Your freedom is our priority. You can request the total removal of your data at any time:</p>
+                <ul>
+                    <li>Directly in the app from the <strong>management menu inside the sound library</strong>.</li>
+                    <li>By sending a request to: <span class="highlight">neuromodzen+deleteaccount@gmail.com</span>. Processed within 48 hours and permanent server deletion completed within 30 days.</li>
+                </ul>
+                <p><small>Note: Please remember to cancel any active subscriptions on the Google Play Store to prevent automatic renewals.</small></p>
+            </div>
+
+            <div class="footer">
+                Neuromod Zen &bull; 2026 &bull; Peace to your senses.
+            </div>
         </div>
+
     </div>
 </body>
 </html>
