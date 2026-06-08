@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="it"> <head>
+<html>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy & Zen - Neuromod</title>
@@ -108,25 +109,23 @@
         ::-webkit-scrollbar-thumb { background: var(--card-bg); border-radius: 10px; }
 
         /* ==========================================================================
-           LOGICA DI SWITCH DELLA LINGUA (HTML5 + CSS3)
+           LOGICA DI SWITCH DELLA LINGUA (HTML5 + CSS3 COMPATIBILE GITHUB)
            ========================================================================== */
         
-        /* 1. Di base mostriamo l'inglese come fallback universale */
-        [lang="it"] { display: none; }
-        [lang="en"] { display: block; }
+        /* 1. Di base nascondiamo l'italiano e mostriamo l'inglese come fallback universale */
+        .content-lang-it { display: none; }
+        .content-lang-en { display: block; }
 
-        /* 2. Se la lingua del browser è l'italiano, invertiamo la visualizzazione */
-        @media (lang: it) {
-            [lang="it"] { display: block; }
-            [lang="en"] { display: none; }
-        }
+        /* 2. Se la lingua del browser di chi naviga è l'italiano, invertiamo la visibilità */
+        *:lang(it) .content-lang-it { display: block; }
+        *:lang(it) .content-lang-en { display: none; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Neuromod Zen</h1>
         
-        <div lang="it">
+        <div class="content-lang-it" lang="it">
             <div class="subtitle">Informativa sulla Privacy</div>
             
             <p>In <strong>Neuromod Zen</strong>, crediamo che la tua privacy sia il primo passo verso la serenità. Questa informativa spiega come trattiamo i tuoi dati con trasparenza e rispetto.</p>
@@ -173,7 +172,7 @@
         </div>
 
 
-        <div lang="en">
+        <div class="content-lang-en" lang="en">
             <div class="subtitle">Privacy Policy</div>
             
             <p>At <strong>Neuromod Zen</strong>, we believe your privacy is the first step toward serenity. This policy explains how we handle your data with transparency and respect.</p>
